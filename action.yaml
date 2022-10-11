@@ -1,0 +1,25 @@
+name: 'Setup terraform credentials'
+description: 'Sets up terraform credentials in your GitHub Actions workflow.'
+author: 'Studist Corporation'
+branding:
+  icon: lock
+  color: yellow
+
+inputs:
+  hostname:
+    required: true
+    default: app.terraform.io
+  token:
+    required: true
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Make .terraformrc
+      shell: bash
+      run: |
+        cat <<EOS >> $HOME/.terraformrc
+        credentials "${{ inputs.hostname }}" {
+          token = "${{ inputs.token }}"
+        }
+        EOS
