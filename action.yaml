@@ -1,4 +1,4 @@
-name: 'Setup terraform credentials'
+name: 'Setup terraformrc'
 description: 'Sets up terraform credentials in your GitHub Actions workflow.'
 author: 'Studist Corporation'
 branding:
