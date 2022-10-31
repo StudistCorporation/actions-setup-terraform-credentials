@@ -13,7 +13,7 @@ This action will setup the terraform credential(`~/.terraformrc`) with the given
     - run: aqua i
 
     # Setup ~/.terraformrc
-    - uses: StudistCorporation/actions-setup-tf-credentials@v1
+    - uses: StudistCorporation/actions-setup-terraform-credentials@v1.0.0
       with:
         token: ${{ secrets.TF_API_TOKEN }}
 
